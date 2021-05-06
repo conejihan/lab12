@@ -111,4 +111,11 @@ public class MainActivity
         drawer.closeDrawer( GravityCompat.START );
         return true;
     }
+
+    private void configureRecyclerView()
+    {
+        recyclerView.setHasFixedSize( true );
+        LinearLayoutManager layoutManager = new LinearLayoutManager( this );
+        recyclerView.setAdapter( tasksAdapter );
+    }
 }
